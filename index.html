@@ -26,6 +26,14 @@
       <img src="assets/images/logo.png" alt="Ananta Home">
     </a>
 
+    <button class="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Open menu" style="display:none;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+
     <ul class="nav__center" id="nav-center" role="list">
       <li><a href="index.html"       class="nav__link">Home</a></li>
       <li><a href="rooms.html"       class="nav__link">Rooms</a></li>
@@ -37,13 +45,17 @@
     </ul>
 
     <a href="contact.html" class="nav__enquire">Enquire</a>
-
-    <button class="nav__toggle" id="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-center">
-      <span class="nav__toggle-bar"></span>
-      <span class="nav__toggle-bar"></span>
-      <span class="nav__toggle-bar"></span>
-    </button>
   </nav>
+
+  <div id="mobile-menu" style="display:none;position:fixed;inset:0;background:rgba(250,248,245,0.98);backdrop-filter:blur(12px);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:32px;">
+    <button onclick="toggleMobileMenu()" style="position:absolute;top:24px;right:24px;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#2E3A3F;">&#x2715;</button>
+    <a href="index.html" onclick="toggleMobileMenu()" style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:#1C1C1A;text-decoration:none;">Home</a>
+    <a href="rooms.html" onclick="toggleMobileMenu()" style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:#1C1C1A;text-decoration:none;">Rooms</a>
+    <a href="experiences.html" onclick="toggleMobileMenu()" style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:#1C1C1A;text-decoration:none;">Experiences</a>
+    <a href="reviews.html" onclick="toggleMobileMenu()" style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:#1C1C1A;text-decoration:none;">Reviews</a>
+    <a href="contact.html" onclick="toggleMobileMenu()" style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:#1C1C1A;text-decoration:none;">Contact</a>
+    <a href="contact.html" onclick="toggleMobileMenu()" style="font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#fff;text-decoration:none;background:#1A8B8C;padding:14px 40px;margin-top:8px;">Enquire Now</a>
+  </div>
 
   <!-- Hero -->
   <section class="hero" aria-label="Welcome to Ananta Home">
@@ -499,6 +511,14 @@
         document.querySelectorAll('#room-menu, #guests-menu').forEach(m => m.style.display = 'none');
       }
     });
+  </script>
+  <script>
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const isOpen = menu.style.display === 'flex';
+    menu.style.display = isOpen ? 'none' : 'flex';
+    document.body.style.overflow = isOpen ? '' : 'hidden';
+  }
   </script>
 </body>
 </html>
