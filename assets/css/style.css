@@ -2478,3 +2478,28 @@ body {
     width: 100% !important;
   }
 }
+
+/* ============================================================
+   Nav Enquire link — white over hero, teal when scrolled
+   ============================================================ */
+nav .nav-enquire,
+nav a.nav-enquire {
+  color: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s, opacity 0.3s;
+}
+
+nav.nav--scrolled .nav-enquire,
+nav.nav--scrolled a.nav-enquire {
+  color: #1A8B8C !important;
+}
+
+nav .nav-enquire:hover,
+nav a.nav-enquire:hover {
+  opacity: 0.75;
+}
