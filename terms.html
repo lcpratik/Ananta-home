@@ -276,5 +276,20 @@
     document.body.style.overflow = isOpen ? '' : 'hidden';
   }
   </script>
+  <div id="cookie-notice" style="position:fixed;bottom:64px;left:0;right:0;background:rgba(46,58,63,0.97);backdrop-filter:blur(12px);z-index:997;padding:16px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.08);">
+    <p style="font-family:'DM Sans',sans-serif;font-size:0.78rem;font-weight:300;color:rgba(255,255,255,0.75);line-height:1.6;margin:0;max-width:680px;">
+      This website uses Google Maps and Google Fonts to enhance your experience. By continuing to browse you agree to our <a href="privacy.html" style="color:#F5A623;text-decoration:none;border-bottom:1px solid rgba(245,166,35,0.4);">Privacy Policy</a>.
+    </p>
+    <button onclick="acceptCookies()" style="background:#1A8B8C;color:#fff;border:none;font-family:'DM Sans',sans-serif;font-size:0.65rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;padding:10px 24px;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:background 0.2s;" onmouseover="this.style.background='#166f70'" onmouseout="this.style.background='#1A8B8C'">Got It</button>
+  </div>
+  <script>
+  function acceptCookies() {
+    document.getElementById('cookie-notice').style.display = 'none';
+    localStorage.setItem('cookiesAccepted', 'true');
+  }
+  if (localStorage.getItem('cookiesAccepted')) {
+    document.getElementById('cookie-notice').style.display = 'none';
+  }
+  </script>
 </body>
 </html>

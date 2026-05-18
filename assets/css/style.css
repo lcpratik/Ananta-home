@@ -2462,3 +2462,19 @@ body {
     gap: 8px !important;
   }
 }
+
+/* ============================================================
+   Cookie Notice
+   ============================================================ */
+@media (max-width: 768px) {
+  #cookie-notice {
+    bottom: 52px !important;
+    padding: 14px 20px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+  #cookie-notice button {
+    width: 100% !important;
+  }
+}
