@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rooms | Ananta Home Kathmandu</title>
+  <meta name="description" content="Three beautifully considered rooms at Ananta Home, Thamel. Deluxe Single, Deluxe Double, and Deluxe Twin with Balcony &mdash; all with complimentary breakfast.">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="main-nav" aria-label="Main navigation">
+    <a href="index.html" class="nav__logo" aria-label="Ananta Home &mdash; return to homepage">
+      <img src="assets/images/logo.png" alt="Ananta Home">
+    </a>
+
+    <ul class="nav__center" id="nav-center" role="list">
+      <li><a href="index.html"        class="nav__link">Home</a></li>
+      <li><a href="rooms.html"        class="nav__link">Rooms</a></li>
+      <li><a href="experiences.html"  class="nav__link">Experiences</a></li>
+      <li><a href="reviews.html"      class="nav__link">Reviews</a></li>
+      <li><a href="index.html#dining" class="nav__link">Dining</a></li>
+      <li><a href="contact.html"      class="nav__link">Contact</a></li>
+      <li><a href="terms.html"        class="nav__link">Terms &amp; Conditions</a></li>
+    </ul>
+
+    <a href="contact.html" class="nav__enquire">Enquire</a>
+
+    <button class="nav__toggle" id="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-center">
+      <span class="nav__toggle-bar"></span>
+      <span class="nav__toggle-bar"></span>
+      <span class="nav__toggle-bar"></span>
+    </button>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero hero--85" aria-label="Accommodation at Ananta Home">
+    <div class="hero__bg">
+      <img
+        src="assets/images/deluxetwin.jpg"
+        alt="Deluxe Twin with Balcony &mdash; two beds, golden headboard, soft morning light"
+        class="img-cover"
+        fetchpriority="high"
+      >
+    </div>
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="hero__content">
+      <span class="hero__eyebrow">Accommodation</span>
+      <h1 class="hero__title">Rest, Beautifully</h1>
+    </div>
+  </section>
+
+  <!-- Room 1: Deluxe Single — photo right, text left -->
+  <section class="room-section reverse" id="single" aria-labelledby="single-heading">
+    <div class="room-photo">
+      <img src="assets/images/deluxesingle.jpg" alt="Deluxe Single room &mdash; refined proportions and warm natural light" loading="lazy">
+    </div>
+    <div class="room-text">
+      <h2 id="single-heading" style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:clamp(2rem,3.5vw,2.8rem);color:#1C1C1A;letter-spacing:0.01em;margin-bottom:8px;">Deluxe Single Room</h2>
+      <p style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-style:italic;font-size:1.1rem;color:#9C9590;margin-bottom:24px;">A room for the solo traveller</p>
+      <p class="room-split__body">Designed with the independent traveller in mind, the Deluxe Single is a calm, well-considered space that gives you everything you need and nothing you don't. The room is compact without feeling small — warm lighting, quality bedding, a proper work desk, and a marble bathroom with rain shower make it easy to feel genuinely at home. Whether you are here for a week of trekking preparation or simply passing through Kathmandu, this room is a reliable and comfortable base.</p>
+      <p style="display:block;font-family:'DM Sans',sans-serif;font-weight:300;font-size:0.75rem;color:#9C9590;line-height:1.6;margin-bottom:28px;">Private Bathroom &nbsp;&middot;&nbsp; Rain Shower &nbsp;&middot;&nbsp; Free WiFi &nbsp;&middot;&nbsp; Air Conditioning &nbsp;&middot;&nbsp; Mini Fridge &nbsp;&middot;&nbsp; Tea Kettle &nbsp;&middot;&nbsp; Flat-screen TV &nbsp;&middot;&nbsp; Private Balcony &nbsp;&middot;&nbsp; Street Views</p>
+      <div style="display:flex;align-items:center;gap:12px;margin-top:8px;flex-wrap:wrap;">
+        <a href="contact.html" style="display:inline-flex;align-items:center;gap:10px;background:#1A8B8C;color:#ffffff;text-decoration:none;font-family:'DM Sans',sans-serif;font-size:0.68rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;padding:14px 32px;transition:background 0.3s ease,transform 0.2s ease;width:auto;white-space:nowrap;" onmouseover="this.style.background='#166f70';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#1A8B8C';this.style.transform='translateY(0)'">Enquire to Book <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Room 2: Deluxe Double — photo left, text right -->
+  <section class="room-section" id="double" aria-labelledby="double-heading">
+    <div class="room-photo">
+      <img src="assets/images/deluxedouble.jpg" alt="Deluxe Double room &mdash; generous proportions, queen bed and warm light" loading="lazy">
+    </div>
+    <div class="room-text">
+      <p style="font-family:'DM Sans',sans-serif;font-size:0.58rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#F5A623;margin-bottom:10px;">&#9733; Most Requested</p>
+      <h2 id="double-heading" style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:clamp(2rem,3.5vw,2.8rem);color:#1C1C1A;letter-spacing:0.01em;margin-bottom:8px;">Deluxe Double Room</h2>
+      <p style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-style:italic;font-size:1.1rem;color:#9C9590;margin-bottom:24px;">Our most popular room</p>
+      <p class="room-split__body">The Deluxe Double is the room our guests return to. A generously sized space with a large double bed, warm ambient lighting, and a bathroom that makes the morning feel unhurried. The room has been put together with care — quality linens, a well-stocked tea station, a mini fridge, and enough space to actually unpack and settle in. Guests who book this room tend to book it again. It is the kind of room that makes Kathmandu feel like somewhere you belong rather than somewhere you are passing through.</p>
+      <p style="display:block;font-family:'DM Sans',sans-serif;font-weight:300;font-size:0.75rem;color:#9C9590;line-height:1.6;margin-bottom:28px;">Private Bathroom &nbsp;&middot;&nbsp; Rain Shower &nbsp;&middot;&nbsp; Free WiFi &nbsp;&middot;&nbsp; Air Conditioning &nbsp;&middot;&nbsp; Mini Fridge &nbsp;&middot;&nbsp; Tea Kettle &nbsp;&middot;&nbsp; Flat-screen TV &nbsp;&middot;&nbsp; Private Balcony &nbsp;&middot;&nbsp; Street Views</p>
+      <div style="display:flex;align-items:center;gap:12px;margin-top:8px;flex-wrap:wrap;">
+        <a href="contact.html" style="display:inline-flex;align-items:center;gap:10px;background:#1A8B8C;color:#ffffff;text-decoration:none;font-family:'DM Sans',sans-serif;font-size:0.68rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;padding:14px 32px;transition:background 0.3s ease,transform 0.2s ease;width:auto;white-space:nowrap;" onmouseover="this.style.background='#166f70';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#1A8B8C';this.style.transform='translateY(0)'">Enquire to Book <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Room 3: Deluxe Twin — photo right, text left -->
+  <section class="room-section reverse" id="twin" aria-labelledby="twin-heading">
+    <div class="room-photo">
+      <img src="assets/images/deluxetwin.jpg" alt="Deluxe Twin with Balcony &mdash; private balcony overlooking Thamel rooftops" loading="lazy">
+    </div>
+    <div class="room-text">
+      <h2 id="twin-heading" style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:clamp(2rem,3.5vw,2.8rem);color:#1C1C1A;letter-spacing:0.01em;margin-bottom:8px;">Deluxe Twin with Balcony</h2>
+      <p style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-style:italic;font-size:1.1rem;color:#9C9590;margin-bottom:24px;">A room that works for two</p>
+      <p class="room-split__body">The Deluxe Twin offers two well-dressed single beds in a room that gives two people genuine comfort without compromise. Whether you are travelling with a friend, a colleague, or a family member, the layout works — enough space for both of you to move around, a bathroom finished in marble with a rain shower, and all the small details that make a stay feel considered rather than simply functional. A quiet, well-located room in the heart of Thamel with everything you need to rest properly between days of exploring Kathmandu.</p>
+      <p style="display:block;font-family:'DM Sans',sans-serif;font-weight:300;font-size:0.75rem;color:#9C9590;line-height:1.6;margin-bottom:28px;">Private Bathroom &nbsp;&middot;&nbsp; Rain Shower &nbsp;&middot;&nbsp; Free WiFi &nbsp;&middot;&nbsp; Air Conditioning &nbsp;&middot;&nbsp; Mini Fridge &nbsp;&middot;&nbsp; Tea Kettle &nbsp;&middot;&nbsp; Flat-screen TV &nbsp;&middot;&nbsp; Private Balcony &nbsp;&middot;&nbsp; Street Views</p>
+      <div style="display:flex;align-items:center;gap:12px;margin-top:8px;flex-wrap:wrap;">
+        <a href="contact.html" style="display:inline-flex;align-items:center;gap:10px;background:#1A8B8C;color:#ffffff;text-decoration:none;font-family:'DM Sans',sans-serif;font-size:0.68rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;padding:14px 32px;transition:background 0.3s ease,transform 0.2s ease;width:auto;white-space:nowrap;" onmouseover="this.style.background='#166f70';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#1A8B8C';this.style.transform='translateY(0)'">Enquire to Book <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="https://wa.me/9779841948068" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;background:transparent;color:#1A8B8C;text-decoration:none;font-family:'DM Sans',sans-serif;font-size:0.68rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;padding:14px 28px;border:1.5px solid #1A8B8C;white-space:nowrap;transition:background 0.3s,color 0.3s;" onmouseover="this.style.background='#1A8B8C';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='#1A8B8C'"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background:#FAF8F5;border-top:1px solid #E8E3DB;padding:40px 56px 24px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px;align-items:start;max-width:1080px;margin:0 auto 28px;">
+
+      <div style="padding-bottom:0;align-self:start;display:flex;flex-direction:column;align-items:center;text-align:center;">
+        <img src="assets/images/logo.png" alt="Ananta Home" style="height:120px;width:auto;display:block;margin-bottom:-32px;">
+        <p style="font-family:'DM Sans',sans-serif;font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:#9C9590;line-height:1.6;margin-top:0;margin-bottom:0;">Infinite Hospitality<br>Thamel, Kathmandu</p>
+      </div>
+
+      <div>
+        <p style="font-family:'DM Sans',sans-serif;font-size:0.58rem;letter-spacing:0.24em;text-transform:uppercase;color:#9C9590;margin-bottom:12px;">NAVIGATE</p>
+        <nav style="display:flex;flex-direction:column;gap:8px;">
+          <a href="index.html" style="font-family:'DM Sans',sans-serif;font-size:0.78rem;color:#2c2c2c;text-decoration:none;letter-spacing:0.06em;transition:color 0.2s;" onmouseover="this.style.color='#1A8B8C'" onmouseout="this.style.color='#2c2c2c'">Home</a>
+          <a href="rooms.html" style="font-family:'DM Sans',sans-serif;font-size:0.78rem;color:#2c2c2c;text-decoration:none;letter-spacing:0.06em;transition:color 0.2s;" onmouseover="this.style.color='#1A8B8C'" onmouseout="this.style.color='#2c2c2c'">Rooms</a>
+          <a href="experiences.html" style="font-family:'DM Sans',sans-serif;font-size:0.78rem;color:#2c2c2c;text-decoration:none;letter-spacing:0.06em;transition:color 0.2s;" onmouseover="this.style.color='#1A8B8C'" onmouseout="this.style.color='#2c2c2c'">Experiences</a>
+          <a href="reviews.html" style="font-family:'DM Sans',sans-serif;font-size:0.78rem;color:#2c2c2c;text-decoration:none;letter-spacing:0.06em;transition:color 0.2s;" onmouseover="this.style.color='#1A8B8C'" onmouseout="this.style.color='#2c2c2c'">Reviews</a>
+          <a href="contact.html" style="font-family:'DM Sans',sans-serif;font-size:0.78rem;color:#2c2c2c;text-decoration:none;letter-spacing:0.06em;transition:color 0.2s;" onmouseover="this.style.color='#1A8B8C'" onmouseout="this.style.color='#2c2c2c'">Contact</a>
+        </nav>
+      </div>
+
+      <div>
+        <p style="font-family:'DM Sans',sans-serif;font-size:0.58rem;letter-spacing:0.24em;text-transform:uppercase;color:#9C9590;margin-bottom:12px;">FIND US</p>
+        <div style="display:flex;flex-direction:column;gap:10px;font-family:'DM Sans',sans-serif;font-size:0.8rem;color:#6B6560;line-height:1.7;">
+          <span>Thamel, Kathmandu, Nepal 44600</span>
+          <a href="tel:014500222" style="color:#1A8B8C;text-decoration:none;">014500222</a>
+          <a href="mailto:anantahomenepal@gmail.com" style="color:#1A8B8C;text-decoration:none;">anantahomenepal@gmail.com</a>
+          <a href="https://wa.me/9779841948068" target="_blank" rel="noopener noreferrer" style="color:#6B6560;text-decoration:none;display:flex;align-items:center;gap:6px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Divider -->
+    <div style="border-top:1px solid #E8E3DB;max-width:1080px;margin:0 auto 20px;"></div>
+
+    <!-- Social + Booking platforms row -->
+    <div style="max-width:1080px;margin:0 auto 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;">
+
+      <div style="display:flex;align-items:center;gap:20px;">
+        <span style="font-family:'DM Sans',sans-serif;font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:#9C9590;">Follow Us</span>
+
+        <a href="https://www.instagram.com/hotelanantahome.np/" target="_blank" rel="noopener noreferrer" title="Instagram" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border:1px solid #E8E3DB;transition:border-color 0.3s,background 0.3s;text-decoration:none;" onmouseover="this.style.borderColor='#E1306C';this.style.background='#E1306C'" onmouseout="this.style.borderColor='#E8E3DB';this.style.background='transparent'">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B6560" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#6B6560" stroke="none"/></svg>
+        </a>
+
+        <a href="https://www.facebook.com/anantahome.np/" target="_blank" rel="noopener noreferrer" title="Facebook" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border:1px solid #E8E3DB;transition:border-color 0.3s,background 0.3s;text-decoration:none;" onmouseover="this.style.borderColor='#1877F2';this.style.background='#1877F2'" onmouseout="this.style.borderColor='#E8E3DB';this.style.background='transparent'">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#6B6560"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+
+        <a href="https://wa.me/9779841948068" target="_blank" rel="noopener noreferrer" title="WhatsApp" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border:1px solid #E8E3DB;transition:border-color 0.3s,background 0.3s;text-decoration:none;" onmouseover="this.style.borderColor='#25D366';this.style.background='#25D366'" onmouseout="this.style.borderColor='#E8E3DB';this.style.background='transparent'">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#6B6560"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+        <span style="font-family:'DM Sans',sans-serif;font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:#9C9590;margin-right:8px;">Book On</span>
+
+        <a href="https://www.booking.com/hotel/np/ananta-home.html" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid #E8E3DB;text-decoration:none;transition:border-color 0.3s,background 0.3s;font-family:'DM Sans',sans-serif;font-size:0.6rem;font-weight:500;letter-spacing:0.06em;color:#003580;" onmouseover="this.style.borderColor='#003580';this.style.background='#003580';this.style.color='#fff'" onmouseout="this.style.borderColor='#E8E3DB';this.style.background='transparent';this.style.color='#003580'">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+          Booking.com
+        </a>
+
+        <a href="https://www.tripadvisor.com/Hotel_Review-g293890-d26770069-Reviews-Ananta_Home-Kathmandu_Kathmandu_Valley_Bagmati_Zone_Central_Region.html" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid #E8E3DB;text-decoration:none;transition:border-color 0.3s,background 0.3s;font-family:'DM Sans',sans-serif;font-size:0.6rem;font-weight:500;letter-spacing:0.06em;color:#34E0A1;" onmouseover="this.style.borderColor='#34E0A1';this.style.background='#34E0A1';this.style.color='#1C1C1A'" onmouseout="this.style.borderColor='#E8E3DB';this.style.background='transparent';this.style.color='#34E0A1'">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+          TripAdvisor
+        </a>
+
+        <a href="https://www.expedia.com/Kathmandu-Hotels-Z-Street.h97459676.Hotel-Information" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid #E8E3DB;text-decoration:none;transition:border-color 0.3s,background 0.3s;font-family:'DM Sans',sans-serif;font-size:0.6rem;font-weight:500;letter-spacing:0.06em;color:#1A1F71;" onmouseover="this.style.borderColor='#1A1F71';this.style.background='#1A1F71';this.style.color='#fff'" onmouseout="this.style.borderColor='#E8E3DB';this.style.background='transparent';this.style.color='#1A1F71'">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Expedia
+        </a>
+
+        <a href="https://maps.google.com/?q=Ananta+Home+Thamel+Kathmandu" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid #E8E3DB;text-decoration:none;transition:border-color 0.3s,background 0.3s;font-family:'DM Sans',sans-serif;font-size:0.6rem;font-weight:500;letter-spacing:0.06em;color:#4285F4;" onmouseover="this.style.borderColor='#4285F4';this.style.background='#4285F4';this.style.color='#fff'" onmouseout="this.style.borderColor='#E8E3DB';this.style.background='transparent';this.style.color='#4285F4'">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Google Maps
+        </a>
+      </div>
+    </div>
+
+    <div style="border-top:1px solid #E8E3DB;padding-top:16px;max-width:1080px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;">
+      <p style="font-family:'DM Sans',sans-serif;font-size:0.6rem;letter-spacing:0.1em;color:#9C9590;">&copy; 2025 Ananta Home. All rights reserved.</p>
+      <a href="privacy.html" style="font-family:'DM Sans',sans-serif;font-size:10px;color:#9C9590;text-decoration:none;letter-spacing:0.08em;border-bottom:1px solid transparent;transition:color 0.2s,border-color 0.2s;margin:0 16px;" onmouseover="this.style.color='#1A8B8C';this.style.borderColor='#1A8B8C'" onmouseout="this.style.color='#9C9590';this.style.borderColor='transparent'">Privacy Policy</a>
+      <a href="terms.html" style="font-family:'DM Sans',sans-serif;font-size:10px;color:#9C9590;text-decoration:none;letter-spacing:0.08em;border-bottom:1px solid transparent;transition:color 0.2s,border-color 0.2s;" onmouseover="this.style.color='#1A8B8C';this.style.borderColor='#1A8B8C'" onmouseout="this.style.color='#9C9590';this.style.borderColor='transparent'">Terms &amp; Conditions</a>
+      <p style="font-family:'DM Sans',sans-serif;font-size:0.6rem;letter-spacing:0.1em;color:#9C9590;">Thamel, Kathmandu &mdash; Nepal</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/9779841948068" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp" style="position:fixed;bottom:80px;right:24px;width:48px;height:48px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:998;box-shadow:0 4px 16px rgba(37,211,102,0.35);transition:transform 0.25s,box-shadow 0.25s;" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 24px rgba(37,211,102,0.5)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 16px rgba(37,211,102,0.35)'">
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- Sticky Booking Bar -->
+  <div id="sticky-bar" role="search" aria-label="Check availability">
+    <div class="bar-field">
+      <span class="booking-bar__label">Check-in</span>
+      <input type="text" id="bar-checkin" class="booking-bar__input booking-bar__input--date" placeholder="Select date" autocomplete="off" readonly aria-label="Check-in date">
+    </div>
+    <div class="bar-field">
+      <span class="booking-bar__label">Check-out</span>
+      <input type="text" id="bar-checkout" class="booking-bar__input booking-bar__input--date" placeholder="Select date" autocomplete="off" readonly aria-label="Check-out date">
+    </div>
+    <div class="bar-field" style="position:relative;">
+      <div>
+        <div class="bar-label">ROOM</div>
+        <div class="bar-value" id="room-display" onclick="toggleDropdown('room-menu')" style="cursor:pointer;">Any Room</div>
+      </div>
+      <div id="room-menu" style="display:none;position:absolute;bottom:72px;left:0;background:#FAF8F5;border:1px solid #E8E3DB;box-shadow:0 -8px 32px rgba(0,0,0,0.08);min-width:220px;z-index:1000;">
+        <div class="drop-option" onclick="selectOption('room-display','room-menu','Any Room')">Any Room</div>
+        <div class="drop-option" onclick="selectOption('room-display','room-menu','Deluxe Single Room')">Deluxe Single Room</div>
+        <div class="drop-option" onclick="selectOption('room-display','room-menu','Deluxe Double Room')">Deluxe Double Room</div>
+        <div class="drop-option" onclick="selectOption('room-display','room-menu','Deluxe Twin with Balcony')">Deluxe Twin with Balcony</div>
+      </div>
+    </div>
+    <div class="bar-field" style="position:relative;">
+      <div>
+        <div class="bar-label">GUESTS</div>
+        <div class="bar-value" id="guests-display" onclick="toggleDropdown('guests-menu')" style="cursor:pointer;">2 Adults</div>
+      </div>
+      <div id="guests-menu" style="display:none;position:absolute;bottom:72px;left:0;background:#FAF8F5;border:1px solid #E8E3DB;box-shadow:0 -8px 32px rgba(0,0,0,0.08);min-width:160px;z-index:1000;">
+        <div class="drop-option" onclick="selectOption('guests-display','guests-menu','1 Adult')">1 Adult</div>
+        <div class="drop-option" onclick="selectOption('guests-display','guests-menu','2 Adults')">2 Adults</div>
+        <div class="drop-option" onclick="selectOption('guests-display','guests-menu','3 Adults')">3 Adults</div>
+        <div class="drop-option" onclick="selectOption('guests-display','guests-menu','4 Adults')">4 Adults</div>
+      </div>
+    </div>
+    <a href="contact.html" class="bar-cta">Check Availability</a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    flatpickr("#bar-checkin", {
+      position: "above",
+      minDate: "today",
+      dateFormat: "D, d M Y",
+      disableMobile: true,
+      onChange: function(selectedDates) {
+        checkoutPicker.set('minDate', selectedDates[0]);
+      }
+    });
+
+    var checkoutPicker = flatpickr("#bar-checkout", {
+      position: "above",
+      minDate: "today",
+      dateFormat: "D, d M Y",
+      disableMobile: true,
+    });
+  </script>
+  <script>
+    function toggleDropdown(id) {
+      const menu = document.getElementById(id);
+      const allMenus = document.querySelectorAll('#room-menu, #guests-menu');
+      allMenus.forEach(m => { if (m.id !== id) m.style.display = 'none'; });
+      menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function selectOption(displayId, menuId, value) {
+      document.getElementById(displayId).textContent = value;
+      document.getElementById(menuId).style.display = 'none';
+    }
+
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('#sticky-bar')) {
+        document.querySelectorAll('#room-menu, #guests-menu').forEach(m => m.style.display = 'none');
+      }
+    });
+  </script>
+</body>
+</html>
