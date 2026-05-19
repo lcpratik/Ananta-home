@@ -422,10 +422,7 @@
         message:    document.getElementById('message').value       || '—',
       };
 
-      Promise.all([
-        emailjs.send('service_vozqxfu', 'template_36t9hai', params),
-        emailjs.send('service_vozqxfu', 'template_nyma75s', params)
-      ]).then(function() {
+      emailjs.send('service_vozqxfu', 'template_36t9hai', params).then(function() {
         document.getElementById('contact-form').style.display = 'none';
         document.getElementById('contact-confirm').style.display = 'block';
       }, function() {
