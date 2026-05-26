@@ -11,6 +11,87 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <style>
+/* ── PAGE ENTRANCE ── */
+
+/* Start everything invisible */
+body {
+  opacity: 0;
+}
+
+/* Fade the whole page in */
+body.page-loaded {
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+
+/* Hero content slides up and fades in */
+.hero-content {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.9s ease 0.4s,
+              transform 0.9s ease 0.4s;
+}
+
+.hero-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero eyebrow text fades in first */
+.hero-eyebrow {
+  opacity: 0;
+  transition: opacity 0.7s ease 0.3s;
+}
+
+.hero-eyebrow.visible {
+  opacity: 1;
+}
+
+/* Nav fades down from top */
+nav, #nav {
+  opacity: 0;
+  transform: translateY(-16px);
+  transition: opacity 0.6s ease 0.1s,
+              transform 0.6s ease 0.1s;
+}
+
+nav.visible, #nav.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Booking bar slides up from bottom */
+#sticky-bar {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease 0.5s,
+              transform 0.6s ease 0.5s;
+}
+
+#sticky-bar.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scroll-triggered fade up for all sections */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease,
+              transform 0.7s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delays for grid children */
+.fade-up:nth-child(1) { transition-delay: 0s; }
+.fade-up:nth-child(2) { transition-delay: 0.1s; }
+.fade-up:nth-child(3) { transition-delay: 0.2s; }
+  </style>
 </head>
 <body>
 
@@ -443,6 +524,80 @@
   if (localStorage.getItem('cookiesAccepted')) {
     document.getElementById('cookie-notice').style.display = 'none';
   }
+  </script>
+  <script>
+// ── PAGE ENTRANCE ANIMATION ──
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  // Step 1: Fade in the whole page
+  setTimeout(function() {
+    document.body.classList.add('page-loaded');
+  }, 50);
+
+  // Step 2: Animate nav down
+  const nav = document.querySelector('nav, #nav');
+  if (nav) {
+    setTimeout(function() {
+      nav.classList.add('visible');
+    }, 100);
+  }
+
+  // Step 3: Animate hero eyebrow first
+  const eyebrow = document.querySelector('.hero-eyebrow');
+  if (eyebrow) {
+    setTimeout(function() {
+      eyebrow.classList.add('visible');
+    }, 300);
+  }
+
+  // Step 4: Animate hero content up
+  const heroContent = document.querySelector('.hero-content');
+  if (heroContent) {
+    setTimeout(function() {
+      heroContent.classList.add('visible');
+    }, 350);
+  }
+
+  // Step 5: Animate sticky bar up
+  const stickyBar = document.getElementById('sticky-bar');
+  if (stickyBar) {
+    setTimeout(function() {
+      stickyBar.classList.add('visible');
+    }, 500);
+  }
+
+  // ── SCROLL ANIMATIONS ──
+  const scrollTargets = document.querySelectorAll(
+    'section, .room-card, .exp-card, .review-card, ' +
+    '.feature, .service-item, .bitem, ' +
+    '.attraction, .score-strip, .welcome-text'
+  );
+
+  scrollTargets.forEach(function(el) {
+    el.classList.add('fade-up');
+  });
+
+  const observer = new IntersectionObserver(
+    function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.08,
+      rootMargin: '0px 0px -40px 0px'
+    }
+  );
+
+  scrollTargets.forEach(function(el) {
+    observer.observe(el);
+  });
+
+});
   </script>
 </body>
 </html>
