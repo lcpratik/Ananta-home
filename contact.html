@@ -91,6 +91,24 @@ nav.visible, #nav.visible {
 .fade-up:nth-child(1) { transition-delay: 0s; }
 .fade-up:nth-child(2) { transition-delay: 0.1s; }
 .fade-up:nth-child(3) { transition-delay: 0.2s; }
+
+/* ── FORM VALIDATION ERRORS ── */
+.field-error {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.03em;
+  color: #B0392B;
+  margin-top: 5px;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease, height 0.2s ease;
+}
+.field-error.active {
+  height: auto;
+  opacity: 1;
+}
   </style>
 </head>
 <body>
@@ -155,11 +173,13 @@ nav.visible, #nav.visible {
         <div class="contact-field">
           <label for="name">FULL NAME</label>
           <input type="text" id="name" name="name" autocomplete="name" required>
+          <span class="field-error" id="name-error"></span>
         </div>
 
         <div class="contact-field">
           <label for="email">EMAIL ADDRESS</label>
           <input type="email" id="email" name="email" autocomplete="email" required>
+          <span class="field-error" id="email-error"></span>
         </div>
 
         <div class="contact-form-grid-2">
@@ -172,6 +192,7 @@ nav.visible, #nav.visible {
             <input type="text" id="form-checkout" name="checkout" autocomplete="off" readonly>
           </div>
         </div>
+        <span class="field-error" id="dates-error"></span>
 
         <div class="contact-form-grid-2">
           <div class="contact-field">
@@ -496,22 +517,85 @@ nav.visible, #nav.visible {
       }
     });
 
+    // ── VALIDATION HELPERS ──
+    function showError(id, msg) {
+      var el = document.getElementById(id);
+      el.textContent = msg;
+      el.classList.add('active');
+    }
+    function clearError(id) {
+      var el = document.getElementById(id);
+      el.textContent = '';
+      el.classList.remove('active');
+    }
+    function isValidEmail(val) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+    }
+
+    // Clear errors as user types
+    document.getElementById('name').addEventListener('input', function() {
+      if (this.value.trim()) clearError('name-error');
+    });
+    document.getElementById('email').addEventListener('input', function() {
+      var v = this.value.trim();
+      if (v && isValidEmail(v)) clearError('email-error');
+    });
+
     document.getElementById('contact-form').addEventListener('submit', function(e) {
       e.preventDefault();
 
-      const btn = this.querySelector('.contact-submit-btn');
+      // ── VALIDATE ──
+      var nameVal  = document.getElementById('name').value.trim();
+      var emailVal = document.getElementById('email').value.trim();
+      var checkin  = document.getElementById('form-checkin').value;
+      var checkout = document.getElementById('form-checkout').value;
+      var valid = true;
+
+      clearError('name-error');
+      clearError('email-error');
+      clearError('dates-error');
+
+      if (!nameVal) {
+        showError('name-error', 'Please enter your full name.');
+        valid = false;
+      }
+      if (!emailVal) {
+        showError('email-error', 'Please enter your email address.');
+        valid = false;
+      } else if (!isValidEmail(emailVal)) {
+        showError('email-error', 'Please enter a valid email address.');
+        valid = false;
+      }
+      if (checkin && checkout) {
+        var inDate  = new Date(checkin.replace(/[^\d]/g, '-').replace(/(\d{2})-(\w+)-(\d{4})/, '$3-$2-$1'));
+        var outDate = new Date(checkout.replace(/[^\d]/g, '-').replace(/(\d{2})-(\w+)-(\d{4})/, '$3-$2-$1'));
+        // Simpler: compare raw flatpickr Date objects stored by flatpickr
+        var inEl  = document.getElementById('form-checkin')._flatpickr;
+        var outEl = document.getElementById('form-checkout')._flatpickr;
+        if (inEl && outEl && inEl.selectedDates[0] && outEl.selectedDates[0]) {
+          if (inEl.selectedDates[0] >= outEl.selectedDates[0]) {
+            showError('dates-error', 'Departure must be after arrival.');
+            valid = false;
+          }
+        }
+      }
+
+      if (!valid) return;
+
+      // ── SEND ──
+      var btn = this.querySelector('.contact-submit-btn');
       btn.textContent = 'SENDING…';
       btn.disabled = true;
 
-      const params = {
-        from_name:  document.getElementById('name').value,
-        reply_to:   document.getElementById('email').value,
-        guest_email: document.getElementById('email').value,
-        checkin:    document.getElementById('form-checkin').value  || 'Not specified',
-        checkout:   document.getElementById('form-checkout').value || 'Not specified',
-        room_type:  document.getElementById('room_type_val').value,
-        guests:     document.getElementById('guests_val').value,
-        message:    document.getElementById('message').value       || '—',
+      var params = {
+        from_name:   nameVal,
+        reply_to:    emailVal,
+        guest_email: emailVal,
+        checkin:     checkin  || 'Not specified',
+        checkout:    checkout || 'Not specified',
+        room_type:   document.getElementById('room_type_val').value,
+        guests:      document.getElementById('guests_val').value,
+        message:     document.getElementById('message').value || '—',
       };
 
       emailjs.send('service_tshqadp', 'template_36t9hai', params).then(function() {
