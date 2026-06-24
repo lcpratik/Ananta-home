@@ -94,20 +94,16 @@ nav.visible, #nav.visible {
 
 /* ── FORM VALIDATION ERRORS ── */
 .field-error {
-  display: block;
+  display: none;
   font-family: 'DM Sans', sans-serif;
   font-size: 0.68rem;
   letter-spacing: 0.03em;
   color: #B0392B;
   margin-top: 5px;
-  height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: opacity 0.2s ease, height 0.2s ease;
+  font-weight: 300;
 }
 .field-error.active {
-  height: auto;
-  opacity: 1;
+  display: block;
 }
   </style>
 </head>

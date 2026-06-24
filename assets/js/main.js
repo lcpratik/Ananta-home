@@ -38,19 +38,4 @@
   });
 })();
 
-// Contact form: fade out, show confirmation
-(function () {
-  var form    = document.getElementById('contact-form');
-  var confirm = document.getElementById('contact-confirm');
-  if (!form || !confirm) return;
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    form.style.opacity = '0';
-    form.style.transition = 'opacity 0.4s ease';
-    setTimeout(function () {
-      form.hidden = true;
-      confirm.hidden = false;
-    }, 400);
-  });
-})();
+// Contact form submission is handled in contact.html inline script (with validation).
